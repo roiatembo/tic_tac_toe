@@ -11,6 +11,13 @@ winning_combinations = [
 [3,5,7]
 ]
 
+mini_gameboard = [
+    ["-","|","-","|","-"],
+    ["-","|","-","|","-"],
+    ["-","|","-","|","-"]
+]
+
+
 available_boxes = [1,2,3,4,5,6,7,8,9]
 player_1_boxes = []
 player_2_boxes = []
@@ -114,3 +121,9 @@ class GamePlay(object):
                 continue_play = self.player_input(condition, player, player_2_boxes, box=choosen_box)
             if continue_play == 1:
                 break
+
+for row in mini_gameboard:
+    pretty_row = ""
+    for item in row:
+        pretty_row += item
+    print(pretty_row)
